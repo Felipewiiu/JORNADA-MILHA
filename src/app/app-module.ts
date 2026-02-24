@@ -3,18 +3,56 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { Header } from './shared/header/header';
+import { Footer } from './shared/footer/footer';
+import { Card } from './shared/card/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { Banner } from './shared/banner/banner';
+import { Container } from './shared/container/container';
+import { Home } from './page/home/home';
+import { CardBusca } from './shared/card-busca/card-busca';
+import { MatCardModule } from '@angular/material/card';
+import { CardDepoimento } from './shared/card-depoimento/card-depoimento';
+import { FormBusca } from './shared/form-busca/form-busca';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatIconModule } from '@angular/material/icon';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { Modal } from './shared/modal/modal';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    Header,
+    Footer,
+    Card,
+    Banner,
+    Container,
+    Home,
+    CardBusca,
+    CardDepoimento,
+    FormBusca,
+    Modal,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatCardModule,
+    MatButtonToggleModule,
+    MatIconModule,
+    MatChipsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-  ],
-  bootstrap: [App]
+  providers: [provideBrowserGlobalErrorListeners()],
+  bootstrap: [App],
 })
-export class AppModule { }
+export class AppModule {}
