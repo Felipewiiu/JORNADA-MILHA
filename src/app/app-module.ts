@@ -23,6 +23,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { Modal } from './shared/modal/modal';
+import {MatDialogModule} from '@angular/material/dialog';
+import { BotaoControle } from './shared/botao-controle/botao-controle';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { Modal } from './shared/modal/modal';
     CardDepoimento,
     FormBusca,
     Modal,
+    BotaoControle,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +53,8 @@ import { Modal } from './shared/modal/modal';
     MatFormFieldModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatDialogModule
   ],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],

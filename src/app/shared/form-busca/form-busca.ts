@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Modal } from '../modal/modal';
 
 @Component({
   selector: 'app-form-busca',
@@ -8,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class FormBusca {
 
+  constructor(public dialog: MatDialog) {
+
+  }
+
+  openDialog() {
+    this.dialog.open(Modal)
+  }
 }
